@@ -1,29 +1,38 @@
 # TechNative-TFS
-<h1>JavaScript Web Calculator
+# JavaScript Web Calculator
 
-<h2>Overview
+### Overview
 
-This project is a simple browser-based calculator built with **HTML**, **CSS**, and **JavaScript**.
+This project is a simple browser-based calculator built with **HTML**, **CSS**, and **JavaScript**. It allows users to perform basic mathematic operations directly in the browser.
 
-The calculator supports
-    - Addition (+)
-    - Subtraction (-)
-    - Multiplication (*)
-    - Division (/)
-    - Negative numbers
-    - "Enter" key execution
-    - Reset button to clear results
+### Features
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+- Supports **negative numbers**
+- "Enter" key execution support
+- Reset button to clear results
 
-<h2>How it works
+### How it works
 
-- The user enters an equation into the input field
-- JavaScript removes spaces and optional "=" signs
-- The equation is validated by the format "number - operator - number"
-- The selected operation is executed
-- The result is displayed on the page
+1. The user enters an equation into the input field
+2. JavaScript removes spaces and optional "=" signs
+3. The equation is validated by the format "number operator number"
+4. The selected operation is executed
+5. The result is displayed on the page
 
-<h2>Structure
-    HTML - index.html
-    CSS - style.css
-    JavaScript - script.js
-    README.md
+### Structure
+- 'index.html' - Page layout
+- 'style.css' - Styling
+- 'script.js' - Calculator logic
+- 'README.md' - Project documentation
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Author 
+**Nate**
+TechNative TFS
