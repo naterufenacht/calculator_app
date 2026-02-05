@@ -3,13 +3,26 @@ const inputField = document.getElementById("userInput");
 const resultDisplay = document.getElementById("result");
 
 button.addEventListener("click", () => {
-    let cleanInput = inputField.value.trim();
-    let parts = cleanInput.split(" ").filter(Boolean);
+    let rawInput = inputField.value;
+    let cleanInput = rawInput.trim();
+
+    let operator;
+    // Space not needed
+    if (cleanInput.includes("+")) operator = "+";
+    else if (cleanInput.includes("-")) operator = "-";
+    else if (cleanInput.includes("*")) operator = "*";
+    else if (cleanInput.includes("/")) operator = "/";
+    else {
+        resultDisplay.textContent = "Error: Operator missing";
+        return;
+    }
+
+    let parts = cleanInput.split(operator);
 
     resultDisplay.className = "result";
 
     // Input length
-    if (parts.length !== 3) {
+    if (parts.length !== 2) {
         resultDisplay.textContent = "Error: Use format like 12 + 5";
         resultDisplay.classList.add("error");
         return;
@@ -17,8 +30,7 @@ button.addEventListener("click", () => {
 
     // Number and operator
     let num1 = parseFloat(parts[0]);
-    let operator = parts[1];
-    let num2 = parseFloat(parts[2]);
+    let num2 = parseFloat(parts[1]);
 
     if (isNaN(num1) || isNaN(num2)) {
         resultDisplay.textContent = "Error: Numbers only";
