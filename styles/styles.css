@@ -1,15 +1,21 @@
+:root {
+    --primary: #FFA600;
+    --secondary: #3271C2;
+    --accent: #006DFF;
+}
+
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    background-color: gray;
+    background-color: var(--primary);
 }
 
 h1 {
     font-size: 45px;
     font-style: oblique;
-    color: white;
+    color: var(--primary);
     border-style:hidden;
-    background-color: darkblue;
+    background-color: var(--secondary);
     border-radius: 50rem;
     
 }
@@ -17,20 +23,20 @@ h1 {
 .container {
     margin: 10%;
     padding: 20px 10px;
-    border: 3px groove darkblue;
+    border: 3px groove var(--accent);
     border-radius: 20px;
-    background-color: whitesmoke;
+    background-color: var(--secondary);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 #userInput {
-    border: 2px groove darkblue;
+    border: 2px groove var(--accent);
     padding: 8px;
 }
 
 #btn,
 #resetBtn {
-    background-color: red;
+    background-color: var(--primary);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -44,7 +50,7 @@ button {
 
 #btn:hover,
 #resetBtn:hover {
-    background: yellow;
+    background: var(--primary);
     color: black;
 }
 
@@ -54,15 +60,15 @@ button {
 }
 
 .success {
-  color: green;
+  color: var(--primary);
   font-weight: bold;
-  background-color: yellow;
+  background-color: var(--accent);
 }
 
 .error {
-  color: red;
+  color:var(--primary);
   font-weight: bold;
-  background-color: black;
+  background-color: var(--accent);
 }
 
 @media (min-width: 900px) {
