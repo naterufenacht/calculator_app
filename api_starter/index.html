@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>API Test</h1>
+    <button id="getBtn">Get Message</button>
+<p id="result"></p>
+
+<script>
+document.getElementById("getBtn").addEventListener("click", async function() {
+    try {
+        const res = await fetch("http://127.0.0.1:3000/api/hello");
+        console.log("Response status:", res.status, res.statusText);
+        const data = await res.json();
+        console.log("Data received:", data);
+        document.getElementById("result").innerText = data.message;
+    } catch (err) {
+        console.error("Fetch error:", err);
+        document.getElementById("result").innerText = "Error fetching message";
+    }
+});
+</script>
+
+</body>
+</html>
